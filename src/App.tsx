@@ -1,6 +1,8 @@
 import './App.css'
 import TodoCreate from './components/TodoCreate'
-import TodoList from './components/TodoList'
+import TodoList from './components/TodoList';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -8,6 +10,7 @@ function App() {
     <div className=''>
       <TodoCreate />
       <TodoList />
+      <ToastContainer />
     </div>
   )
 }
