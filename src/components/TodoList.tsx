@@ -1,8 +1,7 @@
-import React from 'react'
 import Todo from './Todo'
 import { useSelector } from 'react-redux'
-import type { RootState } from '@reduxjs/toolkit/query'
 import type { TodoType } from '../types/Types'
+import type { RootState } from '../redux/store'
 
 const TodoList = () => {
   const {todos} = useSelector((state:RootState) => state.todo)

@@ -1,6 +1,4 @@
-import React from 'react';
 import { IoIosRemoveCircleOutline } from "react-icons/io";
-import { FaCheck } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import type { TodoType } from '../types/Types';
 
