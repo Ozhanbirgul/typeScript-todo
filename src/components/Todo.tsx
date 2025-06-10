@@ -7,7 +7,7 @@ interface todoProps  {
 }
 
 const Todo = ({todoProps}:todoProps) => {
-  const {id, content} = todoProps
+  const {content} = todoProps
   return (
     <div className='flex flex-row items-center justify-between mt-5 border-2 p-3 rounded-md'>
         <div>{content}</div>
