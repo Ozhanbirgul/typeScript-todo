@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux'
 import { createTodo } from '../redux/todoSlice';
 
@@ -9,7 +10,7 @@ const TodoCreate = () => {
 
   const handleCreateTodo = () => {
     if(newTodo.trim().length==0){
-      alert("todo giriniz!")
+      toast.warn("todo giriniz!")
       return;
     }
 
@@ -18,6 +19,7 @@ const TodoCreate = () => {
       content: newTodo
     }
     dispatch(createTodo(payload))
+    toast.success("Todo eklendi!")
     setNewTodo('');
   }
 

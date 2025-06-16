@@ -10,7 +10,17 @@ function App() {
     <div className=''>
       <TodoCreate />
       <TodoList />
-      <ToastContainer />
+      <ToastContainer 
+      position="top-right" 
+      autoClose={2000} 
+      hideProgressBar={false} 
+      newestOnTop={false}
+      closeOnClick
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      />
     </div>
   )
 }

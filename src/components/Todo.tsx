@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { removeTodoById, updateTodo } from "../redux/todoSlice";
 import { FaCheck } from "react-icons/fa";
 import { useState } from "react";
+import { toast } from 'react-toastify';
 
 interface TodoProps {
   todoProps: TodoType
@@ -21,6 +22,7 @@ function Todo({ todoProps }: TodoProps) {
 
   const handleRemoveTodo = () => {
     dispatch(removeTodoById(id))
+    toast.error("Todo silindi!")
   }
 
   const handleUpDateTodo = () => {
@@ -29,6 +31,7 @@ function Todo({ todoProps }: TodoProps) {
       content : newTodo
     }
     dispatch(updateTodo(payload))
+    toast.info("Todo düzenlendi!")
     setEditable(false)
   }
 
